@@ -2,6 +2,11 @@
 @import "./_typography.scss";
 @import url(https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap);
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background: $base;
   color: $text-primary;
@@ -36,6 +41,20 @@ body {
     line-height: 28px;
     padding-bottom: $padding-xs;
     border-bottom: 1px solid rgba(#fff, 0.15);
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 28px;
+    font-family: $font-secondary;
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $text-secondary;
   }
 }
 
@@ -109,7 +128,7 @@ body {
   justify-content: space-between;
   height: 60px;
   position: relative;
-  z-index: 3;
+  z-index: 4;
   position: sticky;
   top: 0;
   left: 0;
@@ -126,7 +145,7 @@ body {
 }
 
 .mobile-menu {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 60px;
   left: 0;
@@ -233,6 +252,7 @@ body {
     margin-top: $padding-lg;
     position: relative;
     z-index: 1;
+    max-width: 334px;
   }
 
   &__gradient {
@@ -244,5 +264,125 @@ body {
     position: absolute;
     top: 0;
     left: calc(50% - 306px);
+  }
+}
+
+.cases {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 52px;
+
+  &__descr {
+    margin-top: $padding-lg;
+  }
+
+  &__top {
+    max-width: 327px;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    margin-top: 60px;
+    display: flex;
+    gap: $padding-lg;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card {
+    transition: $transition-1;
+    padding: 50px 18px;
+    text-align: center;
+    background: #16141e;
+    border: 1px solid #2a273c;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 290px;
+
+    &:hover {
+      background: #100a1d;
+      border: 1px solid rgba(151, 70, 255, 0.5);
+      box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      text-transform: uppercase;
+      margin-top: 18px;
+      margin-bottom: 16px;
+    }
+
+    &-subtitle {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      text-transform: capitalize;
+      color: $text-secondary;
+      max-width: 138px;
+    }
+
+    &-divider {
+      width: 200px;
+      height: 1px;
+      margin: $padding-lg auto;
+      background: #2a273c;
+    }
+
+    &-descr {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      max-width: 200px;
+    }
+  }
+}
+
+.box {
+  position: absolute;
+  z-index: 2;
+
+  &-1 {
+    top: 980px;
+    right: 22px;
+  }
+
+  &-2 {
+    left: -62px;
+    top: 1080px;
+  }
+
+  &-3 {
+    top: 1118px;
+    right: 28px;
+  }
+
+  &-4 {
+    top: 1528px;
+    left: -20px;
+  }
+
+  &-5 {
+    top: 1689px;
+    right: -20px;
+  }
+
+  &-6 {
+    top: 1954px;
+    left: 15px;
+  }
+
+  &-7 {
+    top: 2224px;
+    right: 6px;
   }
 }
