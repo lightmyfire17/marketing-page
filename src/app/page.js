@@ -33,11 +33,11 @@ export default function Home() {
             href={{
               pathname: "/",
             }}
-            className="header__button"
+            className="button button_theme_secondary"
           >
             Marketplace
             <Image
-              className="header__button-icon"
+              className="button-icon"
               src="./icons/angle-right.svg"
               alt="angle"
               width={12}
@@ -76,7 +76,54 @@ export default function Home() {
           </a>
         </nav>
       </div>
-      <main className=""></main>
+      <main className="main">
+        <section className="section intro">
+          <h1 className="intro__title">
+            <span>Buy now,</span>
+            <br />
+            <span>Use now,</span>
+            <br />
+            <span>Pay later</span>
+          </h1>
+          <div className="intro__descr">
+            A new primitive enabling easy <br /> financing for every NFT
+            purchase.
+          </div>
+          <div className="intro__actions">
+            <Link
+              href={{
+                pathname: "/",
+              }}
+              className="intro__button button button_theme_primary"
+            >
+              Try Demo App
+              <Image
+                className="button-icon"
+                src="./icons/angle-right.svg"
+                alt="angle"
+                width={12}
+                height={12}
+              />
+            </Link>
+
+            <Link
+              href={{
+                pathname: "/",
+              }}
+              className="intro__button button button_theme_text"
+            >
+              Get Early Access to SDK
+              <Image
+                className="button-icon"
+                src="./icons/angle-right.svg"
+                alt="angle"
+                width={12}
+                height={12}
+              />
+            </Link>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

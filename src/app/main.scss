@@ -1,5 +1,6 @@
 @import "./_variables.scss";
 @import "./_typography.scss";
+@import url(https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap);
 
 body {
   background: $base;
@@ -7,9 +8,70 @@ body {
   position: relative;
 }
 
+.button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $padding-xxs;
+  padding: $padding-sm $padding-md;
+  border-radius: 10px;
+  letter-spacing: 0.75px;
+  @include txt-small;
+  transition: $transition-1;
+  min-height: 36px;
+  min-width: 135px;
+
+  &_theme {
+    &_primary {
+      background: $primary;
+      border: 1px solid #9746ff;
+
+      &:hover {
+        background: #8525ff;
+        border: 1px solid #9746ff;
+      }
+
+      &:active {
+        background: #8525ff;
+        border: 1px solid #9746ff;
+      }
+    }
+
+    &_secondary {
+      border: 1px solid #2a273c;
+      background: #1c192a;
+
+      &:hover {
+        background: #27223c;
+      }
+
+      &:active {
+        background: $primary;
+      }
+    }
+
+    &_text {
+      border: 1px solid transparent;
+      background: transparent;
+
+      &:hover {
+        background: rgba(136, 114, 188, 0.04);
+      }
+
+      &:active {
+        background: rgba(170, 103, 255, 0.08);
+        border: 1px solid rgba(170, 103, 255, 0.12);
+      }
+    }
+  }
+}
+
 .header {
   box-sizing: border-box;
   padding: 12px 24px 12px 18px;
+  background: rgba(14, 10, 24, 0.3);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(#fff, 0.15);
   display: flex;
   align-items: center;
@@ -17,36 +79,14 @@ body {
   height: 60px;
   position: relative;
   z-index: 2;
-  background: $base;
+  position: sticky;
+  top: 0;
+  left: 0;
 
   &__right {
     display: flex;
     align-items: center;
     gap: $padding-lg;
-  }
-
-  &__button {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    gap: $padding-xxs;
-    padding: $padding-sm $padding-md;
-    background: #1c192a;
-    border: 1px solid #2a273c;
-    border-radius: 10px;
-    letter-spacing: 0.75px;
-    @include txt-small;
-    transition: $transition-1;
-    min-height: 36px;
-    min-width: 135px;
-
-    &:hover {
-      background: #27223c;
-    }
-
-    &:active {
-      background: $primary;
-    }
   }
 
   &__burger {
@@ -91,5 +131,64 @@ body {
         color: $primary;
       }
     }
+  }
+}
+
+.main {
+  padding: 20px;
+}
+
+.intro {
+  padding-top: $padding-llg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    font-family: $font-secondary;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+
+    span {
+      &:nth-of-type(1) {
+        font-weight: 300;
+      }
+
+      &:nth-of-type(2) {
+        font-weight: 500;
+      }
+
+      &:nth-of-type(3) {
+        font-style: italic;
+        font-weight: 900;
+      }
+    }
+  }
+
+  &__descr {
+    padding-top: $padding-default;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fz-default;
+    line-height: 24px;
+    color: $text-secondary;
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: $padding-llg;
+    display: flex;
+    flex-direction: column;
+    gap: $padding-lg;
+  }
+
+  &__button {
+    width: 100%;
   }
 }
