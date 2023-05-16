@@ -123,6 +123,12 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        <section className="section products">
+          <h2 className="section__title">products</h2>
+          <img className="products__img" src="/products.png" alt="product" />
+          <div className="products__gradient"></div>
+        </section>
       </main>
     </div>
   );

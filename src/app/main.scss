@@ -8,6 +8,37 @@ body {
   position: relative;
 }
 
+.main {
+  overflow-x: hidden;
+}
+
+.image-container {
+  width: 100%;
+
+  > div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
+
+.section {
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fz-xs;
+    text-transform: uppercase;
+    line-height: 28px;
+    padding-bottom: $padding-xs;
+    border-bottom: 1px solid rgba(#fff, 0.15);
+  }
+}
+
 .button {
   box-sizing: border-box;
   display: flex;
@@ -190,5 +221,28 @@ body {
 
   &__button {
     width: 100%;
+  }
+}
+
+.products {
+  margin-top: 54px;
+  position: relative;
+
+  &__img {
+    margin: 0 auto;
+    margin-top: $padding-lg;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__gradient {
+    background: #3f2471;
+    filter: blur(200px);
+    border-radius: 9999px;
+    width: 612px;
+    height: 473px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 306px);
   }
 }
