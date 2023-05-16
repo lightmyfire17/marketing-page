@@ -388,3 +388,80 @@ body {
     right: 6px;
   }
 }
+
+.try {
+  margin-top: 126px;
+
+  &__card {
+    background: linear-gradient(180deg, #16141e 0%, #0e0a18 100%);
+    border: 1px solid #2a273c;
+    border-radius: 30px;
+    padding: 56px $padding-lg;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__title {
+    max-width: 287px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+  }
+
+  &__descr {
+    margin-top: $padding-default;
+    color: $text-secondary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 218px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: #ffe920;
+    transition: $transition-1;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__char {
+    position: absolute;
+    right: -252px;
+    top: -22px;
+    height: 261px;
+    width: auto;
+    max-width: unset;
+  }
+
+  &__gradient {
+    bottom: -239px;
+    right: -50px;
+    width: 903.89px;
+    height: 903.89px;
+    position: absolute;
+    filter: blur(100px);
+    transform: matrix(-0.99, -0.16, -0.16, 0.99, 0, 0);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__blur {
+    position: absolute;
+    width: 600px;
+    height: 242px;
+    left: 0;
+    top: 30px;
+    background: #323232;
+    filter: blur(200px);
+    border-radius: 9999px;
+  }
+}

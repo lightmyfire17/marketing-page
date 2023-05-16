@@ -187,6 +187,28 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <section className="section try">
+          <div className="try__card">
+            <div className="try__content">
+              <div className="try__title">
+                Try it today, Build On it tomorrow
+              </div>
+              <div className="try__descr">
+                If you're interested in bringing BNPL to your NFT project,&nbsp;
+                <span className="try__link">schedule a call!</span>
+              </div>
+              <img className="try__char" src="/try-char.png" alt="character" />
+              <img
+                className="try__gradient"
+                src="/try-gradient.png"
+                alt="gradient"
+              />
+            </div>
+
+            <div className="try__blur"></div>
+          </div>
+        </section>
       </main>
     </div>
   );
