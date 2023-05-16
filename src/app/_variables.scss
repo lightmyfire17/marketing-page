@@ -1,0 +1,28 @@
+// Colors
+$base: #0f0b19;
+$text-primary: #fff;
+$text-secondary: #81859f;
+$primary: #7000ff;
+
+// Spacing
+$padding-xxs: 4px;
+$padding-xs: 8px;
+$padding-sm: 10px;
+$padding-md: 12px;
+$padding-default: 16px;
+$padding-lg: 24px;
+$padding-llg: 40px;
+
+// Text
+$fz-xxxs: 0.5rem !default; // 8px
+$fz-xxs: 0.625rem !default; // 10px
+$fz-xs: 0.75rem !default; // 12px
+$fz-sm: 0.875rem !default; // 14px
+$fz-default: 1rem !default; // Assumes the browser default, typically `16px`
+$fz-md: 1.5rem !default; // 24px
+$fz-lg: 2rem !default; // 32px
+$fz-llg: 4rem !default; // 64px
+
+// Transitions
+$transition-1: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+$transition-2: 0.3s ease-out all;
