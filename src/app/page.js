@@ -384,7 +384,7 @@ export default function Home() {
                 <Image
                   className="input__icon"
                   src="./icons/arrow-right.svg"
-                  alt="logo"
+                  alt="arrow-right"
                   width={16}
                   height={16}
                 />
@@ -447,6 +447,56 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className="footer">
+        <div className="footer__top">
+          <Image
+            className="footer__logo"
+            src="./icons/logo.svg"
+            alt="logo"
+            width={72}
+            height={19}
+          />
+          <div className="footer__descr">The Future is Bananas 💛</div>
+        </div>
+
+        <div className="footer__grid">
+          <div className="footer__column">
+            <div className="footer__title">products</div>
+            <a href="#" className="footer__link">
+              SDK
+            </a>
+            <a href="#" className="footer__link">
+              Lending dApp
+            </a>
+          </div>
+
+          <div className="footer__column">
+            <div className="footer__title">NiftyApes</div>
+            <a href="#" className="footer__link">
+              docs
+            </a>
+            <a href="#" className="footer__link">
+              blog
+            </a>
+            <a href="#" className="footer__link">
+              HSLA Whitepaper
+            </a>
+            <a href="#" className="footer__link">
+              Careers
+            </a>
+          </div>
+
+          <div className="footer__column">
+            <div className="footer__title">community-</div>
+            <a href="#" className="footer__link">
+              twitter
+            </a>
+            <a href="#" className="footer__link">
+              discord
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
