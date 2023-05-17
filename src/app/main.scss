@@ -13,6 +13,17 @@ body {
   position: relative;
 }
 
+.link {
+  display: flex;
+  transition: $transition-1;
+  align-items: center;
+  gap: $padding-xs;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
 .main {
   overflow-x: hidden;
 }
@@ -655,6 +666,61 @@ body {
       background: $primary;
       border: 1px solid #9746ff;
       box-shadow: 0px 4px 15px rgba(112, 0, 255, 0.4);
+    }
+  }
+}
+
+.blog {
+  padding-top: 70px;
+
+  &__descr {
+    margin: 32px 0;
+  }
+
+  &__grid {
+    margin-top: 64px;
+    display: grid;
+    grid-gap: 32px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 290px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: $padding-lg;
+  }
+
+  &__card {
+    width: 290px;
+    height: 290px;
+    background: #16141e;
+    border: 1px solid #2a273c;
+    border-radius: 30px;
+
+    &-featured {
+      position: relative;
+      top: $padding-lg;
+      left: $padding-lg;
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 16px;
+      gap: 4px;
+      background: rgba(255, 160, 3, 0.1);
+      border: 1px solid #ffa003;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 18px;
+      align-items: center;
+      letter-spacing: 0.75px;
+      color: #ffa003;
+      font-family: $font-secondary;
+      text-transform: uppercase;
     }
   }
 }

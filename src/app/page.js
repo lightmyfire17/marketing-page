@@ -242,10 +242,10 @@ export default function Home() {
               Get Early Access to SDK
               <Image
                 className="button-icon"
-                src="./icons/angle-right.svg"
+                src="./icons/arrow-up-right.svg"
                 alt="angle"
-                width={12}
-                height={12}
+                width={14}
+                height={14}
               />
             </Link>
           </div>
@@ -402,6 +402,49 @@ export default function Home() {
             width={108}
             height={118}
           />
+        </section>
+
+        <section className="section blog">
+          <h3 className="section__subtitle">NiftyApes Blog</h3>
+          <p className="section__descr blog__descr">
+            Financing works for every asset, every user, in every use-case.
+          </p>
+          <a href="#" className="link">
+            Read more{" "}
+            <Image
+              className="button-icon"
+              src="./icons/arrow-up-right.svg"
+              alt="arrow"
+              width={14}
+              height={14}
+            />
+          </a>
+
+          <div className="blog__grid">
+            <div className="blog__item">
+              <div className="blog__card">
+                <div className="blog__card-featured">
+                  <Image
+                    src="./icons/lightning.svg"
+                    alt="feature-icon"
+                    width={14}
+                    height={14}
+                  />
+                  featured
+                </div>
+              </div>
+              <div className="blog__title">
+                Announcing the Seller Financing Protocol
+              </div>
+            </div>
+
+            <div className="blog__item">
+              <div className="blog__card"></div>
+              <div className="blog__title">
+                Announcing the Seller Financing Protocol
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
