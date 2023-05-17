@@ -291,7 +291,7 @@ export default function Home() {
                 Try it today, Build On it tomorrow
               </div>
               <div className="try__descr">
-                If you're interested in bringing BNPL to your NFT project,{" "}
+                If you`re interested in bringing BNPL to your NFT project,{" "}
                 <span className="try__link">schedule a call!</span>
               </div>
               <img className="try__char" src="/try-char.png" alt="character" />
