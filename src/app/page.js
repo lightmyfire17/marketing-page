@@ -12,6 +12,101 @@ export default function Home() {
     setMenu(!menuOpen);
   };
 
+  const backers = [
+    {
+      name: "Cyrus Younessi",
+      org: "MakerDAO",
+    },
+    {
+      name: "VapeApe",
+      org: "NounsDAO",
+    },
+    {
+      name: "Alexander Salnikov",
+      org: "Rarible",
+    },
+    {
+      name: "James Duncan",
+      org: "Maple Finance, SZNs",
+    },
+    {
+      name: "Gregory Rocco",
+      org: "Spruce ID",
+    },
+    {
+      name: "Ryan Sean Adams",
+      org: "Bankless",
+    },
+    {
+      name: "Jake Chervinsky",
+      org: "Blockchain Association",
+    },
+    {
+      name: "Zack Yanger",
+      org: "SuperRare",
+    },
+    {
+      name: "David Hoffman",
+      org: "Bankless",
+    },
+    {
+      name: "DCInvestor.eth",
+      org: "SuperRare",
+    },
+    {
+      name: "Ben Lakoff",
+      org: "Charged Particles",
+    },
+    {
+      name: "Brendan Forster",
+      org: "Dharma, OpenSea",
+    },
+    {
+      name: "James Young",
+      org: "Collab-Land",
+    },
+    {
+      name: "Charles Crain",
+      org: "SuperRare",
+    },
+    {
+      name: "Fran Renzi",
+      org: "SuperFluid",
+    },
+    {
+      name: "QuickRider",
+      org: "SquigglesDAO",
+    },
+    {
+      name: "Eric Conner",
+      org: "Into the Ether",
+    },
+    {
+      name: "Anthony Sassano",
+      org: "The Daily Gwei",
+    },
+    {
+      name: "Nadav Hollander",
+      org: "Dharma, OpenSea",
+    },
+    {
+      name: "Nick Emmons",
+      org: "Upshot",
+    },
+    {
+      name: "Scott Moore",
+      org: "PleasrDAO, GitCoin",
+    },
+    {
+      name: "Lane Rettig",
+      org: "Space Mesh",
+    },
+    {
+      name: "John Crane",
+      org: "SuperRare",
+    },
+  ];
+
   const cases = [
     {
       icon: "collectors",
@@ -207,6 +302,62 @@ export default function Home() {
             </div>
 
             <div className="try__blur"></div>
+          </div>
+        </section>
+
+        <section className="section backers">
+          <h2 className="section__title">backed by</h2>
+
+          <div className="backers__logos">
+            <div className="backers__logos-top">
+              <img
+                className="backers__logo"
+                src="./backers/backer-1.svg"
+                alt="backer"
+              />
+              <img
+                className="backers__logo"
+                src="./backers/backer-2.svg"
+                alt="backer"
+              />
+              <img
+                className="backers__logo"
+                src="./backers/backer-3.svg"
+                alt="backer"
+              />
+            </div>
+
+            <div className="backers__logos-bottom">
+              <img
+                className="backers__logo"
+                src="./backers/backer-4.svg"
+                alt="backer"
+              />
+              <img
+                className="backers__logo"
+                src="./backers/backer-5.svg"
+                alt="backer"
+              />
+              <img
+                className="backers__logo"
+                src="./backers/backer-6.svg"
+                alt="backer"
+              />
+              <img
+                className="backers__logo"
+                src="./backers/backer-7.svg"
+                alt="backer"
+              />
+            </div>
+          </div>
+
+          <div className="backers__vces">
+            {backers.map((x, i) => (
+              <div className="backers__vc" key={i}>
+                <div className="backers__vc-title">{x.name}</div>
+                <div className="backers__vc-subtitle">{x.org}</div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
