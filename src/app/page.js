@@ -361,6 +361,48 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <section className="section contact">
+          <div className="contact__content">
+            <Image
+              className="contact__logo"
+              src="./icons/logo.svg"
+              alt="logo"
+              width={44}
+              height={24}
+            />
+            <div className="contact__descr">
+              Be the first to get product updates from NiftyApes
+            </div>
+            <div className="input">
+              <input
+                type="text"
+                className="input__controller"
+                placeholder="Enter your email"
+              />
+              <div className="input__button">
+                <Image
+                  className="input__icon"
+                  src="./icons/arrow-right.svg"
+                  alt="logo"
+                  width={16}
+                  height={16}
+                />
+              </div>
+            </div>
+            <div className="contact__info">
+              This signs you up to our Newsletter.We won’t spam you.
+            </div>
+          </div>
+          <div className="contact__gradient"></div>
+          <Image
+            className="contact__img"
+            src="./icons/banana-man.svg"
+            alt="logo"
+            width={108}
+            height={118}
+          />
+        </section>
       </main>
     </div>
   );
