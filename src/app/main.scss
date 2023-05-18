@@ -686,6 +686,17 @@ body {
 
   &__item {
     width: 290px;
+
+    &:hover,
+    :focus {
+      .blog__card {
+        border: 1px solid rgba(151, 70, 255, 0.5);
+      }
+
+      .blog__card-img {
+        transform: scale(1.2);
+      }
+    }
   }
 
   &__title {
@@ -693,14 +704,33 @@ body {
     font-size: 24px;
     line-height: 28px;
     margin-top: $padding-lg;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__card {
+    overflow: hidden;
+    border: 1px solid #2a273c;
+    box-sizing: border-box;
+    transition: $transition-1;
     width: 290px;
     height: 290px;
     background: #16141e;
     border: 1px solid #2a273c;
     border-radius: 30px;
+
+    &-img {
+      transition: $transition-1;
+      width: 290px;
+      height: 290px;
+      background: #16141e;
+      border-radius: 30px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
     &-featured {
       position: relative;

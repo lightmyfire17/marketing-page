@@ -4,10 +4,30 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import GhostContentAPI from "@tryghost/content-api";
 
 export default function Home() {
+  const api = new GhostContentAPI({
+    url: process.env.NEXT_PUBLIC_BLOG_API_URL,
+    key: process.env.NEXT_PUBLIC_GHOST_API_KEY,
+    version: "v5.0",
+  });
+
   const [menuOpen, setMenu] = useState(false);
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  const getBlogPosts = () => {
+    api.posts
+      .browse({ limit: 3 })
+      .then((posts) => {
+        setBlogPosts(posts);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
 
   const toggleMenu = () => {
     setMenu(!menuOpen);
@@ -131,6 +151,10 @@ export default function Home() {
         "Give your users options, increase sales, and get your marketplace fee paid at the time of sale.",
     },
   ];
+
+  useEffect(() => {
+    getBlogPosts();
+  }, []);
 
   return (
     <div className="content">
@@ -421,29 +445,28 @@ export default function Home() {
           </a>
 
           <div className="blog__grid">
-            <div className="blog__item">
-              <div className="blog__card">
-                <div className="blog__card-featured">
-                  <Image
-                    src="./icons/lightning.svg"
-                    alt="feature-icon"
-                    width={14}
-                    height={14}
-                  />
-                  featured
+            {blogPosts.map((x, i) => (
+              <a className="blog__item" key={i} href={x.url} target="_blank">
+                <div className="blog__card">
+                  <div
+                    className="blog__card-img"
+                    style={{ backgroundImage: `url(${x.feature_image})` }}
+                  ></div>
+                  {x.featured && (
+                    <div className="blog__card-featured">
+                      <Image
+                        src="./icons/lightning.svg"
+                        alt="feature-icon"
+                        width={14}
+                        height={14}
+                      />
+                      featured
+                    </div>
+                  )}
                 </div>
-              </div>
-              <div className="blog__title">
-                Announcing the Seller Financing Protocol
-              </div>
-            </div>
-
-            <div className="blog__item">
-              <div className="blog__card"></div>
-              <div className="blog__title">
-                Announcing the Seller Financing Protocol
-              </div>
-            </div>
+                <div className="blog__title">{x.title}</div>
+              </a>
+            ))}
           </div>
         </section>
       </main>
