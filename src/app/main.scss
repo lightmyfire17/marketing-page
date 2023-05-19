@@ -400,6 +400,213 @@ body {
   }
 }
 
+.how {
+  margin-top: 72px;
+  position: relative;
+
+  &__descr {
+    margin: 32px 0;
+    text-align: center;
+  }
+
+  &__grid {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: unset;
+    bottom: -106px;
+  }
+
+  &__explain {
+    max-width: 325px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+
+    &-part {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 9px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+
+      &-tooltip {
+        height: 40px;
+        width: 120px;
+        position: absolute;
+        bottom: 46px;
+
+        &-icon {
+          max-width: unset;
+          position: absolute;
+          width: 144px;
+          left: -10px;
+          top: -5px;
+        }
+
+        &-text {
+          position: relative;
+          top: 8px;
+          left: 18px;
+          display: inline;
+          z-index: 1;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 24px;
+          font-family: $font-secondary;
+        }
+      }
+
+      &-1 {
+        background: #9a4bff;
+      }
+
+      &-2 {
+        background: #7fd760;
+      }
+
+      &-3 {
+        background: #7fd860;
+        border-radius: 100em;
+      }
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 52px;
+    }
+
+    &-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &-bottom {
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &-buyer,
+    &-seller {
+      background: #0e0a18;
+      border-radius: 20px;
+      height: 60px;
+      width: 67px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-buyer {
+      border: 1.5px solid #9a4bff;
+    }
+
+    &-seller {
+      border: 1.5px solid #7fd85f;
+    }
+
+    &-arrow {
+      position: absolute;
+      left: 62px;
+    }
+
+    &-ellipse {
+      position: absolute;
+      bottom: -62px;
+      left: 28px;
+    }
+
+    &-installments {
+      padding: $padding-default $padding-lg;
+      font-family: $font-secondary;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+      background: #0e0a18;
+      border: 1px solid #373737;
+      border-radius: 15px;
+      width: max-content;
+      margin: 0 auto;
+      margin-top: 22px;
+    }
+
+    &-card {
+      height: 200px;
+      width: 200px;
+      border: 1px solid #373737;
+      border-radius: 30px;
+      background-image: url("/howto.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    &-heading {
+      font-family: $font-secondary;
+      background: #0e0a18;
+      border: 1px solid #373737;
+      border-radius: 12px;
+      width: 110px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 18px;
+      letter-spacing: 0.75px;
+      position: absolute;
+      left: 45px;
+      top: -20px;
+    }
+
+    &-button {
+      background: #1c192a;
+      border: 2px solid #2a273c;
+      border-radius: 999px;
+      box-sizing: border-box;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: $font-secondary;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+      transition: $transition-1;
+
+      &:hover,
+      &:active,
+      &_active {
+        background: #7000ff;
+        border: 2px solid #9746ff;
+      }
+    }
+  }
+}
+
 .try {
   margin-top: 126px;
 

@@ -308,6 +308,96 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section how">
+          <h2 className="section__title">how it works</h2>
+          <p className="section__descr how__descr">
+            Seller financing for NFTs allows buyers to purchase NFTs on credit,
+            with the seller providing financing and the buyer making installment
+            payments over time.
+          </p>
+
+          <div className="how__explain">
+            <div className="how__explain-top">
+              <div className="how__explain-button">2</div>
+            </div>
+            <div className="how__explain-center">
+              <div className="how__explain-button">1</div>
+              <div className="how__explain-card">
+                <div className="how__explain-heading">CloneX #8075</div>
+              </div>
+              <div className="how__explain-button">3</div>
+              <Image
+                className="how__explain-ellipse"
+                src="./icons/howto-ellipse.svg"
+                alt="ellipse"
+                width={259}
+                height={12}
+              />
+            </div>
+            <div className="how__explain-bottom">
+              <Image
+                className="how__explain-arrow"
+                src="./icons/howto-arrow.svg"
+                alt="arrow"
+                width={193}
+                height={12}
+              />
+              <div className="how__explain-buyer">Buyer</div>
+              <div className="how__explain-part how__explain-part-1">
+                <Image
+                  className="how__explain-part-icon"
+                  src="./icons/clock.svg"
+                  alt="clock"
+                  width={14}
+                  height={14}
+                />
+                <div className="how__explain-part-tooltip">
+                  <Image
+                    className="how__explain-part-tooltip-icon"
+                    src="./icons/howto-tooltip.svg"
+                    alt="tooltip"
+                    width={120}
+                    height={40}
+                  />
+                  <div className="how__explain-part-tooltip-text">
+                    Down Payment
+                  </div>
+                </div>
+              </div>
+              <div className="how__explain-part how__explain-part-2">
+                <Image
+                  className="how__explain-part-icon"
+                  src="./icons/clock.svg"
+                  alt="clock"
+                  width={14}
+                  height={14}
+                />
+              </div>
+              <div className="how__explain-part how__explain-part-3">
+                <Image
+                  className="how__explain-part-icon"
+                  src="./icons/eth.svg"
+                  alt="eth"
+                  width={14}
+                  height={14}
+                />
+              </div>
+              <div className="how__explain-seller">Seller</div>
+            </div>
+            <div className="how__explain-installments">
+              Monthly Installments
+            </div>
+          </div>
+
+          <Image
+            className="how__grid"
+            src={"./icons/grid.svg"}
+            alt="grid"
+            width={600}
+            height={600}
+          />
+        </section>
+
         <section className="section try">
           <div className="try__card">
             <div className="try__content">
