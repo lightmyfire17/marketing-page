@@ -172,6 +172,20 @@ export default function Home() {
             height={18}
           />
         </Link>
+        <div className="header__menu">
+          <a href="#" className="header__menu-link">
+            Examples
+          </a>
+          <a href="#" className="header__menu-link">
+            Docs
+          </a>
+          <a href="#" className="header__menu-link">
+            Faq
+          </a>
+          <a href="#" className="header__menu-link">
+            Lending
+          </a>
+        </div>
         <div className="header__right">
           <Link
             href={{
@@ -327,19 +341,35 @@ export default function Home() {
               </div>
               <div className="how__explain-button">3</div>
               <Image
-                className="how__explain-ellipse"
+                className="how__explain-ellipse how__explain-ellipse_sm"
                 src="./icons/howto-ellipse.svg"
                 alt="ellipse"
                 width={259}
                 height={12}
               />
+
+              <Image
+                className="how__explain-ellipse how__explain-ellipse_md"
+                src="./icons/howto-ellipse-md.svg"
+                alt="ellipse"
+                width={485}
+                height={12}
+              />
             </div>
             <div className="how__explain-bottom">
               <Image
-                className="how__explain-arrow"
+                className="how__explain-arrow how__explain-arrow_sm"
                 src="./icons/howto-arrow.svg"
                 alt="arrow"
                 width={193}
+                height={12}
+              />
+
+              <Image
+                className="how__explain-arrow how__explain-arrow_md"
+                src="./icons/howto-arrow-md.svg"
+                alt="arrow"
+                width={386}
                 height={12}
               />
               <div className="how__explain-buyer">Buyer</div>
@@ -363,6 +393,15 @@ export default function Home() {
                     Down Payment
                   </div>
                 </div>
+              </div>
+              <div className="how__explain-part how__explain-part-4">
+                <Image
+                  className="how__explain-part-icon"
+                  src="./icons/clock.svg"
+                  alt="clock"
+                  width={14}
+                  height={14}
+                />
               </div>
               <div className="how__explain-part how__explain-part-2">
                 <Image
@@ -520,19 +559,21 @@ export default function Home() {
 
         <section className="section blog">
           <h3 className="section__subtitle">NiftyApes Blog</h3>
-          <p className="section__descr blog__descr">
-            Financing works for every asset, every user, in every use-case.
-          </p>
-          <a href="#" className="link">
-            Read more{" "}
-            <Image
-              className="button-icon"
-              src="./icons/arrow-up-right.svg"
-              alt="arrow"
-              width={14}
-              height={14}
-            />
-          </a>
+          <div className="blog__top">
+            <p className="section__descr blog__descr">
+              Financing works for every asset, every user, in every use-case.
+            </p>
+            <a href="#" className="link">
+              Read more{" "}
+              <Image
+                className="button-icon"
+                src="./icons/arrow-up-right.svg"
+                alt="arrow"
+                width={14}
+                height={14}
+              />
+            </a>
+          </div>
 
           <div className="blog__grid">
             {blogPosts.map((x, i) => (
@@ -600,7 +641,7 @@ export default function Home() {
           </div>
 
           <div className="footer__column">
-            <div className="footer__title">community-</div>
+            <div className="footer__title">community</div>
             <a href="#" className="footer__link">
               twitter
             </a>

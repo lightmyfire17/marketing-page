@@ -1,0 +1,9 @@
+@mixin size-md {
+  @media (min-width: $size-md) {
+    @content;
+  }
+}
+
+%size-md {
+  @include size-md;
+}
