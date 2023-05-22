@@ -1238,10 +1238,11 @@ body {
     justify-content: center;
 
     @include size-md {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, 290px);
       grid-row-gap: 57px;
       grid-column-gap: 20px;
       margin-bottom: 86px;
+      justify-content: flex-start;
     }
   }
 
