@@ -7,3 +7,13 @@
 %size-md {
   @include size-md;
 }
+
+@mixin size-lg {
+  @media (min-width: $size-lg) {
+    @content;
+  }
+}
+
+%size-lg {
+  @include size-lg;
+}

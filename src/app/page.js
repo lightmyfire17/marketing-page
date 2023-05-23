@@ -332,14 +332,14 @@ export default function Home() {
 
           <div className="how__explain">
             <div className="how__explain-top">
-              <div className="how__explain-button">2</div>
+              <div className="how__explain-button how__explain-button_2">2</div>
             </div>
             <div className="how__explain-center">
-              <div className="how__explain-button">1</div>
+              <div className="how__explain-button how__explain-button_1">1</div>
               <div className="how__explain-card">
                 <div className="how__explain-heading">CloneX #8075</div>
               </div>
-              <div className="how__explain-button">3</div>
+              <div className="how__explain-button how__explain-button_3">3</div>
               <Image
                 className="how__explain-ellipse how__explain-ellipse_sm"
                 src="./icons/howto-ellipse.svg"

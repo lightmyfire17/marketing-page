@@ -27,6 +27,12 @@ body {
 
 .main {
   overflow-x: hidden;
+
+  @include size-lg {
+    max-width: $size-lg;
+    margin: 0 auto;
+    overflow-x: visible;
+  }
 }
 
 .image-container {
@@ -67,6 +73,16 @@ body {
     font-size: 18px;
     line-height: 24px;
     color: $text-secondary;
+
+    @include size-md {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @include size-lg {
+      font-size: 22px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -173,6 +189,10 @@ body {
       gap: $padding-lg;
     }
 
+    @include size-lg {
+      gap: 32px;
+    }
+
     &-item {
       transition: $transition-1;
       cursor: pointer;
@@ -264,6 +284,12 @@ body {
       margin: 0 auto;
     }
 
+    @include size-lg {
+      font-size: 84px;
+      line-height: 90px;
+      max-width: 489px;
+    }
+
     span {
       &:nth-of-type(1) {
         font-weight: 300;
@@ -292,6 +318,12 @@ body {
       max-width: 333px;
       margin: 0 auto;
     }
+
+    @include size-lg {
+      font-size: 22px;
+      padding-top: $padding-lg;
+      max-width: 413px;
+    }
   }
 
   &__actions {
@@ -306,6 +338,11 @@ body {
       max-width: 412px;
       margin-top: 56px;
     }
+
+    @include size-lg {
+      margin-top: 64px;
+      max-width: max-content;
+    }
   }
 
   &__button {
@@ -317,6 +354,17 @@ body {
       &:first-child {
         order: 2;
         width: 160px;
+      }
+    }
+
+    @include size-lg {
+      padding: $padding-default $padding-lg;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 14px;
+
+      &:first-child {
+        width: max-content;
       }
     }
   }
@@ -364,6 +412,10 @@ body {
     margin-top: 68px;
   }
 
+  @include size-lg {
+    margin-top: 100px;
+  }
+
   &__descr {
     margin-top: $padding-lg;
   }
@@ -371,6 +423,10 @@ body {
   &__top {
     max-width: 327px;
     margin: 0 auto;
+
+    @include size-lg {
+      max-width: 353px;
+    }
   }
 
   &__grid {
@@ -388,6 +444,10 @@ body {
       flex-flow: row wrap;
       justify-content: center;
       max-width: 600px;
+    }
+
+    @include size-lg {
+      max-width: max-content;
     }
   }
 
@@ -444,6 +504,10 @@ body {
       font-size: 14px;
       line-height: 24px;
       max-width: 200px;
+
+      @include size-md {
+        min-height: 96px;
+      }
     }
   }
 }
@@ -462,6 +526,11 @@ body {
       top: 1200px;
       right: 100px;
     }
+
+    @include size-lg {
+      top: 1400px;
+      right: 519px;
+    }
   }
 
   &-2 {
@@ -473,6 +542,11 @@ body {
     @include size-md {
       left: -35px;
       top: 1125px;
+    }
+
+    @include size-lg {
+      left: 36px;
+      top: 1328px;
     }
   }
 
@@ -486,6 +560,11 @@ body {
       top: 1266px;
       right: 28px;
     }
+
+    @include size-lg {
+      top: 1446px;
+      right: 318px;
+    }
   }
 
   &-4 {
@@ -497,6 +576,11 @@ body {
     @include size-md {
       left: 25px;
     }
+
+    @include size-lg {
+      left: 398px;
+      top: 1536px;
+    }
   }
 
   &-5 {
@@ -504,6 +588,11 @@ body {
     right: -20px;
     height: 80px;
     width: 80px;
+
+    @include size-lg {
+      top: 1764px;
+      right: 150px;
+    }
   }
 
   &-6 {
@@ -514,6 +603,11 @@ body {
 
     @include size-md {
       left: 210px;
+    }
+
+    @include size-lg {
+      left: 280px;
+      top: 1976px;
     }
   }
 
@@ -527,6 +621,11 @@ body {
       top: 2050px;
       right: 210px;
     }
+
+    @include size-lg {
+      top: 1948px;
+      right: 726px;
+    }
   }
 }
 
@@ -538,13 +637,24 @@ body {
     margin-top: 92px;
   }
 
+  @include size-lg {
+    margin-top: 124px;
+  }
+
   &__descr {
     margin: 32px 0;
     text-align: center;
 
     @include size-md {
+      margin: 0 auto;
       margin-top: 50px;
       margin-bottom: 100px;
+      max-width: 630px;
+    }
+
+    @include size-lg {
+      margin-top: 64px;
+      margin-bottom: 44px;
     }
   }
 
@@ -559,6 +669,12 @@ body {
 
     @include size-md {
       bottom: -36px;
+    }
+
+    @include size-lg {
+      width: 1070px;
+      height: 1070px;
+      bottom: -612px;
     }
   }
 
@@ -813,6 +929,7 @@ body {
       line-height: 24px;
       letter-spacing: 0.75px;
       transition: $transition-1;
+      position: relative;
 
       &:hover,
       &:active,
@@ -820,12 +937,28 @@ body {
         background: #7000ff;
         border: 2px solid #9746ff;
       }
+
+      @include size-md {
+        &_1 {
+          top: 100px;
+          left: -20px;
+        }
+
+        &_3 {
+          top: 100px;
+          right: -20px;
+        }
+      }
     }
   }
 }
 
 .try {
   margin-top: 126px;
+
+  @include size-lg {
+    margin-top: 160px;
+  }
 
   &__card {
     background: linear-gradient(180deg, #16141e 0%, #0e0a18 100%);
@@ -837,6 +970,11 @@ body {
 
     @include size-md {
       padding: 86px 50px;
+    }
+
+    @include size-lg {
+      padding: 88px 172px;
+      border-radius: 45px;
     }
   }
 
@@ -856,6 +994,13 @@ body {
       line-height: 54px;
       letter-spacing: 3px;
     }
+
+    @include size-lg {
+      font-weight: 900;
+      font-size: 56px;
+      line-height: 64px;
+      max-width: 467px;
+    }
   }
 
   &__descr {
@@ -870,6 +1015,12 @@ body {
       max-width: 343px;
       font-size: 18px;
       line-height: 24px;
+    }
+
+    @include size-lg {
+      font-size: 22px;
+      line-height: 36px;
+      max-width: 443px;
     }
   }
 
@@ -896,6 +1047,12 @@ body {
       right: -336px;
       top: -150px;
       height: 548px;
+    }
+
+    @include size-lg {
+      right: -300px;
+      top: -152px;
+      height: 610px;
     }
   }
 
@@ -933,12 +1090,22 @@ body {
     margin-top: 64px;
   }
 
+  @include size-lg {
+    margin-top: 186px;
+  }
+
   &__logos {
     align-items: center;
     margin-top: $padding-lg;
 
     @include size-md {
       margin-top: 44px;
+    }
+
+    @include size-lg {
+      max-width: 904px;
+      margin: 0 auto;
+      margin-top: 60px;
     }
 
     &-top {
@@ -953,6 +1120,10 @@ body {
           @include size-md {
             width: 106px;
           }
+
+          @include size-lg {
+            width: 160px;
+          }
         }
         &:nth-of-type(2) {
           width: 152px;
@@ -960,12 +1131,20 @@ body {
           @include size-md {
             width: 278px;
           }
+
+          @include size-lg {
+            width: 420px;
+          }
         }
         &:nth-of-type(3) {
           width: 82px;
 
           @include size-md {
             width: 150px;
+          }
+
+          @include size-lg {
+            width: 227px;
           }
         }
       }
@@ -981,6 +1160,10 @@ body {
         margin-top: 48px;
       }
 
+      @include size-lg {
+        margin-top: 45px;
+      }
+
       .backers__logo {
         &:nth-of-type(1) {
           width: 67px;
@@ -988,19 +1171,33 @@ body {
           @include size-md {
             width: 123px;
           }
+
+          @include size-lg {
+            width: 151px;
+          }
         }
+
         &:nth-of-type(2) {
           width: 110px;
 
           @include size-md {
             width: 202px;
           }
+
+          @include size-lg {
+            width: 249px;
+          }
         }
+
         &:nth-of-type(3) {
           width: 27px;
 
           @include size-md {
             width: 50px;
+          }
+
+          @include size-lg {
+            width: 62px;
           }
         }
         &:nth-of-type(4) {
@@ -1008,6 +1205,10 @@ body {
 
           @include size-md {
             width: 152px;
+          }
+
+          @include size-lg {
+            width: 187px;
           }
         }
       }
@@ -1026,6 +1227,13 @@ body {
       grid-column-gap: 40px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    @include size-lg {
+      max-width: 904px;
+      margin: 0 auto;
+      margin-top: 60px;
+      grid-column-gap: 78px;
+    }
   }
 
   &__vc {
@@ -1040,6 +1248,10 @@ body {
         font-size: 15px;
         line-height: 28px;
       }
+
+      @include size-lg {
+        font-size: 19px;
+      }
     }
 
     &-subtitle {
@@ -1052,6 +1264,10 @@ body {
       @include size-md {
         font-size: 13px;
         line-height: 28px;
+      }
+
+      @include size-lg {
+        font-size: 15px;
       }
     }
   }
@@ -1075,6 +1291,16 @@ body {
     margin-top: 130px;
     left: -72px;
     width: calc(100% + 144px);
+  }
+
+  @include size-lg {
+    margin-top: 160px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
   &__logo {
@@ -1209,6 +1435,10 @@ body {
     padding-top: 86px;
   }
 
+  @include size-lg {
+    padding-top: 96px;
+  }
+
   &__descr {
     margin-top: 24px;
     margin-bottom: 32px;
@@ -1218,6 +1448,12 @@ body {
       font-size: 20px;
       line-height: 28px;
       max-width: 330px;
+    }
+
+    @include size-lg {
+      max-width: unset;
+      font-size: 22px;
+      line-height: 32px;
     }
   }
 
@@ -1244,10 +1480,20 @@ body {
       margin-bottom: 86px;
       justify-content: flex-start;
     }
+
+    @include size-lg {
+      grid-template-columns: repeat(auto-fill, 410px);
+      grid-column-gap: 30px;
+      margin-bottom: 104px;
+    }
   }
 
   &__item {
     width: 290px;
+
+    @include size-lg {
+      width: 410px;
+    }
 
     &:hover,
     :focus {
@@ -1283,6 +1529,11 @@ body {
     border: 1px solid #2a273c;
     border-radius: 30px;
 
+    @include size-lg {
+      width: 410px;
+      height: 410px;
+    }
+
     &-img {
       transition: $transition-1;
       width: 290px;
@@ -1292,6 +1543,11 @@ body {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
+      @include size-lg {
+        width: 410px;
+        height: 410px;
+      }
     }
 
     &-featured {
@@ -1329,6 +1585,19 @@ body {
     gap: 46px;
   }
 
+  @include size-lg {
+    margin: 0 auto;
+    position: relative;
+    max-width: $size-lg;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include size-lg {
+      width: 115px;
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1337,6 +1606,10 @@ body {
     @include size-md {
       grid-gap: 40px;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include size-lg {
+      grid-gap: 78px;
     }
   }
 
@@ -1358,6 +1631,10 @@ body {
     font-size: 18px;
     line-height: 28px;
     max-width: 128px;
+
+    @include size-lg {
+      font-size: 20px;
+    }
   }
 
   &__column {
