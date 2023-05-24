@@ -291,7 +291,7 @@ export default function Home() {
 
         <section className="section products">
           <h2 className="section__title">products</h2>
-          <img className="products__img" src="/products.png" alt="product" />
+          <div className="products__img" />
           <div className="products__gradient"></div>
         </section>
 
@@ -337,7 +337,7 @@ export default function Home() {
             <div className="how__explain-center">
               <div className="how__explain-button how__explain-button_1">1</div>
               <div className="how__explain-card">
-                <div className="how__explain-heading">CloneX #8075</div>
+                <div className="how__explain-heading">CloneX #3997</div>
               </div>
               <div className="how__explain-button how__explain-button_3">3</div>
               <Image
@@ -448,11 +448,7 @@ export default function Home() {
                 <span className="try__link">schedule a call!</span>
               </div>
               <img className="try__char" src="/try-char.png" alt="character" />
-              <img
-                className="try__gradient"
-                src="/try-gradient.png"
-                alt="gradient"
-              />
+              <div className="try__gradient" />
             </div>
 
             <div className="try__blur"></div>

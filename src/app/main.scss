@@ -274,7 +274,6 @@ body {
   }
 
   &__title {
-    font-family: $font-secondary;
     font-style: normal;
     font-size: 56px;
     line-height: 60px;
@@ -383,25 +382,45 @@ body {
 
   &__img {
     margin: 0 auto;
-    margin-top: $padding-lg;
+    margin-top: 48px;
     position: relative;
     z-index: 1;
-    max-width: 334px;
+    width: 334px;
+    height: 275px;
+    background-image: url("/products.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include size-md {
-      max-width: 100%;
+      height: 478px;
+      width: 570px;
+      margin-top: 64px;
+    }
+
+    @include size-lg {
+      height: 523px;
+      width: 637px;
+      margin-top: 64px;
     }
   }
 
   &__gradient {
-    background: #3f2471;
+    background: radial-gradient(
+        126.4% 126.4% at 50% -12.22%,
+        rgba(170, 103, 255, 0.5) 0%,
+        rgba(255, 107, 0, 0.5) 37.5%,
+        rgba(108, 193, 0, 0.5) 80.21%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    opacity: 0.9;
     filter: blur(200px);
     border-radius: 9999px;
-    width: 612px;
-    height: 473px;
+    width: 800px;
+    height: 600px;
     position: absolute;
     top: 0;
-    left: calc(50% - 306px);
+    left: calc(50% - 400px);
   }
 }
 
@@ -409,14 +428,14 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
-  margin-top: 52px;
+  margin-top: 76px;
 
   @include size-md {
-    margin-top: 68px;
+    margin-top: 92px;
   }
 
   @include size-lg {
-    margin-top: 100px;
+    margin-top: 124px;
   }
 
   &__descr {
@@ -889,7 +908,7 @@ body {
       width: 200px;
       border: 1px solid #373737;
       border-radius: 30px;
-      background-image: url("/howto.png");
+      background-image: url("/howto.webp");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -985,22 +1004,19 @@ body {
   &__title {
     max-width: 287px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 28px;
     line-height: 36px;
     text-transform: uppercase;
-    font-family: $font-secondary;
 
     @include size-md {
       max-width: 400px;
-      font-weight: 900;
       font-size: 48px;
       line-height: 54px;
       letter-spacing: 3px;
     }
 
     @include size-lg {
-      font-weight: 900;
       font-size: 56px;
       line-height: 64px;
       max-width: 467px;
@@ -1043,34 +1059,35 @@ body {
 
   &__char {
     position: absolute;
-    right: -252px;
-    top: -22px;
-    height: 261px;
+    right: -144px;
+    top: -80px;
+    height: 397px;
     width: auto;
     max-width: unset;
 
     @include size-md {
       padding: 86px 50px;
-      right: -336px;
-      top: -150px;
-      height: 548px;
+      right: -186px;
+      top: -190px;
+      height: 700px;
     }
 
     @include size-lg {
-      right: -300px;
-      top: -152px;
-      height: 610px;
+      right: -128px;
+      top: -216px;
+      height: 800px;
     }
   }
 
   &__gradient {
-    bottom: -239px;
-    right: -50px;
-    width: 903.89px;
-    height: 903.89px;
     position: absolute;
-    filter: blur(100px);
-    transform: matrix(-0.99, -0.16, -0.16, 0.99, 0, 0);
+    width: 600px;
+    height: 242px;
+    left: 717px;
+    top: 343px;
+    background: #ffc700;
+    filter: blur(200px);
+    border-radius: 9999px;
   }
 
   &__content {
