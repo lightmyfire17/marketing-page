@@ -19,9 +19,10 @@ body {
   transition: $transition-1;
   align-items: center;
   gap: $padding-xs;
+  opacity: 0.5;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
@@ -193,7 +194,7 @@ body {
       gap: 32px;
     }
 
-    &-item {
+    &-link {
       transition: $transition-1;
       cursor: pointer;
       font-style: normal;
@@ -201,9 +202,10 @@ body {
       font-size: 16px;
       line-height: 19px;
       letter-spacing: 0.75px;
+      opacity: 0.5;
 
       &:hover {
-        color: $primary;
+        opacity: 1;
       }
     }
   }
@@ -323,6 +325,7 @@ body {
       font-size: 22px;
       padding-top: $padding-lg;
       max-width: 413px;
+      line-height: 32px;
     }
   }
 
@@ -448,6 +451,7 @@ body {
 
     @include size-lg {
       max-width: max-content;
+      column-gap: 32px;
     }
   }
 
@@ -1021,6 +1025,8 @@ body {
       font-size: 22px;
       line-height: 36px;
       max-width: 443px;
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -1028,6 +1034,7 @@ body {
     text-decoration: underline;
     color: #ffe920;
     transition: $transition-1;
+    cursor: pointer;
 
     &:hover {
       color: $primary;
