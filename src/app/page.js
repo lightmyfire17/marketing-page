@@ -174,25 +174,40 @@ export default function Home() {
           />
         </Link>
         <div className="header__menu">
-          <a href="#" className="header__menu-link">
+          <a
+            href="https://niftyapes.readme.io/docs/buy-now-pay-later"
+            target="_blank"
+            className="header__menu-link"
+          >
             Examples
           </a>
-          <a href="#" className="header__menu-link">
+          <a
+            href="https://niftyapes.readme.io/docs/introduction"
+            target="_blank"
+            className="header__menu-link"
+          >
             Docs
           </a>
-          <a href="#" className="header__menu-link">
+          <a
+            href="https://niftyapes.readme.io/docs/faq"
+            target="_blank"
+            className="header__menu-link"
+          >
             Faq
           </a>
-          <a href="#" className="header__menu-link">
+          <a
+            href="https://app.niftyapes.money"
+            target="_blank"
+            className="header__menu-link"
+          >
             Lending
           </a>
         </div>
         <div className="header__right">
           <Link
-            href={{
-              pathname: "/",
-            }}
+            href="https://marketplace.niftyapes.money"
             className="button button_theme_secondary"
+            target="_blank"
           >
             Marketplace
             <Image
@@ -218,19 +233,27 @@ export default function Home() {
         className={menuOpen ? "mobile-menu mobile-menu_open" : "mobile-menu"}
       >
         <nav className="mobile-menu__nav">
-          <a className="mobile-menu__nav-link" href="#">
+          <a className="mobile-menu__nav-link" href="#products">
             Products
           </a>
-          <a className="mobile-menu__nav-link" href="#">
+          <a className="mobile-menu__nav-link" href="#usecases">
             Use cases
           </a>
-          <a className="mobile-menu__nav-link" href="#">
+          <a className="mobile-menu__nav-link" href="#howitworks">
             How it works
           </a>
-          <a className="mobile-menu__nav-link" href="#">
+          <a
+            className="mobile-menu__nav-link"
+            href="https://blog.niftyapes.money/"
+            target="_blank"
+          >
             Blog
           </a>
-          <a className="mobile-menu__nav-link" href="#">
+          <a
+            className="mobile-menu__nav-link"
+            href="https://calendly.com/mark-niftyapes/30min"
+            target="_blank"
+          >
             Schedule a call
           </a>
         </nav>
@@ -257,9 +280,8 @@ export default function Home() {
           </div>
           <div className="intro__actions">
             <Link
-              href={{
-                pathname: "/",
-              }}
+              href="https://marketplace.niftyapes.money"
+              target="_blank"
               className="intro__button button button_theme_primary"
             >
               Try Demo App
@@ -273,9 +295,8 @@ export default function Home() {
             </Link>
 
             <Link
-              href={{
-                pathname: "/",
-              }}
+              href="https://niftyapes.readme.io/docs/introduction"
+              target="_blank"
               className="intro__button button button_theme_text"
             >
               Get Early Access to SDK
@@ -290,7 +311,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section products">
+        <section className="section products" id="products">
           <h2 className="section__title">products</h2>
           <Tilt
             className="products__wrapper"
@@ -303,7 +324,7 @@ export default function Home() {
           <div className="products__gradient"></div>
         </section>
 
-        <section className="section cases">
+        <section className="section cases" id="cases">
           <div className="cases__top">
             <h3 className="section__subtitle">Use Cases</h3>
             <p className="cases__descr section__descr">
@@ -330,7 +351,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section how">
+        <section className="section how" id="howitworks">
           <h2 className="section__title">how it works</h2>
           <p className="section__descr how__descr">
             Seller financing for NFTs allows buyers to purchase NFTs on credit,
@@ -457,7 +478,13 @@ export default function Home() {
                 </div>
                 <div className="try__descr">
                   If you`re interested in bringing BNPL to your NFT project,{" "}
-                  <span className="try__link">schedule a call!</span>
+                  <a
+                    href="https://calendly.com/mark-niftyapes/30min"
+                    target="_blank"
+                    className="try__link"
+                  >
+                    schedule a call!
+                  </a>
                 </div>
                 <img
                   className="try__char"
@@ -576,7 +603,11 @@ export default function Home() {
             <p className="section__descr blog__descr">
               Financing works for every asset, every user, in every use-case.
             </p>
-            <a href="#" className="link">
+            <a
+              href="https://blog.niftyapes.money/"
+              target="_blank"
+              className="link"
+            >
               Read more{" "}
               <Image
                 className="button-icon"
@@ -629,36 +660,68 @@ export default function Home() {
         <div className="footer__grid">
           <div className="footer__column">
             <div className="footer__title">products</div>
-            <a href="#" className="footer__link">
+            <a
+              href="https://niftyapes.readme.io/docs/introduction"
+              target="_blank"
+              className="footer__link"
+            >
               SDK
             </a>
-            <a href="#" className="footer__link">
+            <a
+              href="https://app.niftyapes.money"
+              target="_blank"
+              className="footer__link"
+            >
               Lending dApp
             </a>
           </div>
 
           <div className="footer__column">
             <div className="footer__title">NiftyApes</div>
-            <a href="#" className="footer__link">
+            <a
+              href="https://niftyapes.readme.io/docs/introduction"
+              target="_blank"
+              className="footer__link"
+            >
               docs
             </a>
-            <a href="#" className="footer__link">
+            <a
+              href="https://blog.niftyapes.money/"
+              target="_blank"
+              className="footer__link"
+            >
               blog
             </a>
-            <a href="#" className="footer__link">
+            <a
+              href="https://whitepaper.niftyapes.money/"
+              target="_blank"
+              className="footer__link"
+            >
               HSLA Whitepaper
             </a>
-            <a href="#" className="footer__link">
+            <a
+              href="https://jobs.niftyapes.money"
+              target="_blank"
+              className="footer__link"
+            >
               Careers
             </a>
           </div>
 
           <div className="footer__column">
             <div className="footer__title">community</div>
-            <a href="#" className="footer__link">
+            <a
+              href="https://twitter.com/NiftyApes"
+              target="_blank"
+              className="footer__link"
+            >
               twitter
             </a>
-            <a href="#" className="footer__link">
+            <a
+              href="https://discord.gg/niftyapes"
+              target="_blank"
+              className="footer__link"
+            >
               discord
             </a>
           </div>
