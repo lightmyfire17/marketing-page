@@ -261,11 +261,11 @@ export default function Home() {
       <main className="main">
         <img className="box box-1" src="/box-1.svg" alt="decor" />
         <img className="box box-2" src="/box-2.svg" alt="decor" />
-        <img className="box box-3" src="/box-3.svg" alt="decor" />
+        <img className="box box-3" src="/box-7.webp" alt="decor" />
         <img className="box box-4" src="/box-4.png" alt="decor" />
         <img className="box box-5" src="/box-5.png" alt="decor" />
         <img className="box box-6" src="/box-6.webp" alt="decor" />
-        <img className="box box-7" src="/box-7.webp" alt="decor" />
+        <img className="box box-7" src="/box-3.svg" alt="decor" />
         <section className="section intro">
           <h1 className="intro__title">
             <span>Buy now,</span>
@@ -470,7 +470,7 @@ export default function Home() {
         </section>
 
         <section className="section try">
-          <Tilt tiltMaxAngleX="5" tiltMaxAngleY="5" transitionEasing="ease">
+          <Tilt tiltMaxAngleX="2" tiltMaxAngleY="2" transitionEasing="ease">
             <div className="try__card">
               <div className="try__content">
                 <div className="try__title">
