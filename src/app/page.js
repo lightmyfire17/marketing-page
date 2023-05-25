@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Tilt from "react-parallax-tilt";
 
 import { useState, useEffect } from "react";
 
@@ -132,7 +133,7 @@ export default function Home() {
     {
       icon: "collectors",
       title: "For Collectors",
-      subtitle: "Buy NFTs Now,Pay for Them Later",
+      subtitle: "Buy NFTs Now, Pay for Them Later",
       descr:
         "Access and use highly sought-after NFTs without paying the full price upfront",
     },
@@ -235,13 +236,13 @@ export default function Home() {
         </nav>
       </div>
       <main className="main">
-        <img className="box box-1" src="/box-1.png" alt="decor" />
-        <img className="box box-2" src="/box-2.png" alt="decor" />
-        <img className="box box-3" src="/box-3.png" alt="decor" />
+        <img className="box box-1" src="/box-1.svg" alt="decor" />
+        <img className="box box-2" src="/box-2.svg" alt="decor" />
+        <img className="box box-3" src="/box-3.svg" alt="decor" />
         <img className="box box-4" src="/box-4.png" alt="decor" />
         <img className="box box-5" src="/box-5.png" alt="decor" />
-        <img className="box box-6" src="/box-6.png" alt="decor" />
-        <img className="box box-7" src="/box-7.png" alt="decor" />
+        <img className="box box-6" src="/box-6.webp" alt="decor" />
+        <img className="box box-7" src="/box-7.webp" alt="decor" />
         <section className="section intro">
           <h1 className="intro__title">
             <span>Buy now,</span>
@@ -291,7 +292,14 @@ export default function Home() {
 
         <section className="section products">
           <h2 className="section__title">products</h2>
-          <div className="products__img" />
+          <Tilt
+            className="products__wrapper"
+            tiltMaxAngleX="10"
+            tiltMaxAngleY="10"
+            transitionEasing="ease"
+          >
+            <div className="products__img" />
+          </Tilt>
           <div className="products__gradient"></div>
         </section>
 
@@ -336,9 +344,12 @@ export default function Home() {
             </div>
             <div className="how__explain-center">
               <div className="how__explain-button how__explain-button_1">1</div>
-              <div className="how__explain-card">
-                <div className="how__explain-heading">CloneX #3997</div>
-              </div>
+              <Tilt className="how__explain-wrapper" transitionEasing="ease">
+                <div className="how__explain-card">
+                  <div className="how__explain-heading">CloneX #3997</div>
+                </div>
+              </Tilt>
+
               <div className="how__explain-button how__explain-button_3">3</div>
               <Image
                 className="how__explain-ellipse how__explain-ellipse_sm"
@@ -438,21 +449,27 @@ export default function Home() {
         </section>
 
         <section className="section try">
-          <div className="try__card">
-            <div className="try__content">
-              <div className="try__title">
-                Try it today, Build On it tomorrow
+          <Tilt tiltMaxAngleX="5" tiltMaxAngleY="5" transitionEasing="ease">
+            <div className="try__card">
+              <div className="try__content">
+                <div className="try__title">
+                  Try it today, Build On it tomorrow
+                </div>
+                <div className="try__descr">
+                  If you`re interested in bringing BNPL to your NFT project,{" "}
+                  <span className="try__link">schedule a call!</span>
+                </div>
+                <img
+                  className="try__char"
+                  src="/try-char.png"
+                  alt="character"
+                />
+                <div className="try__gradient" />
               </div>
-              <div className="try__descr">
-                If you`re interested in bringing BNPL to your NFT project,{" "}
-                <span className="try__link">schedule a call!</span>
-              </div>
-              <img className="try__char" src="/try-char.png" alt="character" />
-              <div className="try__gradient" />
-            </div>
 
-            <div className="try__blur"></div>
-          </div>
+              <div className="try__blur"></div>
+            </div>
+          </Tilt>
         </section>
 
         <section className="section backers">
