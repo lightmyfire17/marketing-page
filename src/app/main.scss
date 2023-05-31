@@ -1368,6 +1368,20 @@ body {
     }
   }
 
+  &__button {
+    margin: 0 auto;
+    letter-spacing: 0.75px;
+    width: max-content;
+
+    @include size-md {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 26px;
+      margin: 32px auto;
+      padding: 16px 24px;
+    }
+  }
+
   &__content {
     max-width: 317px;
     margin: 0 auto;

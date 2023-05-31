@@ -567,7 +567,21 @@ export default function Home() {
             <div className="contact__descr">
               Be the first to get product updates from NiftyApes
             </div>
-            <div className="input">
+            <Link
+              href="https://blog.niftyapes.money/#/portal/signup"
+              target="_blank"
+              className="contact__button button button_theme_text"
+            >
+              Continue with subscription
+              <Image
+                className="button-icon"
+                src="./icons/arrow-up-right.svg"
+                alt="angle"
+                width={14}
+                height={14}
+              />
+            </Link>
+            {/* <div className="input">
               <input
                 type="text"
                 className="input__controller"
@@ -582,9 +596,11 @@ export default function Home() {
                   height={16}
                 />
               </div>
-            </div>
+            </div> */}
             <div className="contact__info">
-              This signs you up to our Newsletter.We won’t spam you.
+              This signs you up to our Newsletter.
+              <br />
+              We won’t spam you.
             </div>
           </div>
           <div className="contact__gradient"></div>
