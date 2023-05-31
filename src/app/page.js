@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 
+import { Tooltip } from "react-tooltip";
+import ClickAwayListener from "react-click-away-listener";
+
 import { useState, useEffect } from "react";
 
 import GhostContentAPI from "@tryghost/content-api";
@@ -18,6 +21,7 @@ export default function Home() {
 
   const [menuOpen, setMenu] = useState(false);
   const [blogPosts, setBlogPosts] = useState([]);
+  const [activeExplain, setExplain] = useState("");
 
   const getBlogPosts = () => {
     api.posts
@@ -361,17 +365,117 @@ export default function Home() {
 
           <div className="how__explain">
             <div className="how__explain-top">
-              <div className="how__explain-button how__explain-button_2">2</div>
+              <ClickAwayListener onClickAway={() => setExplain("")}>
+                <div
+                  className={
+                    activeExplain === "2"
+                      ? "how__explain-button how__explain-button_2 how__explain-button_active"
+                      : "how__explain-button how__explain-button_2"
+                  }
+                  data-tooltip-id="explain-2"
+                  onClick={() => setExplain("2")}
+                >
+                  2
+                </div>
+              </ClickAwayListener>
+              <Tooltip
+                id="explain-2"
+                openOnClick
+                className="tooltip"
+                place="bottom"
+              >
+                <div className="tooltip__content">
+                  <Image
+                    className="tooltip__icon"
+                    src="./icons/listing.svg"
+                    alt="listing"
+                    width={40}
+                    height={40}
+                  />
+                  <div className="tooltip__title">Listing</div>
+                  <div className="tooltip__descr">
+                    A seller creates a listing for BNPL. It specifies the final
+                    price, downpayment, APR, and total payments.
+                  </div>
+                </div>
+              </Tooltip>
             </div>
             <div className="how__explain-center">
-              <div className="how__explain-button how__explain-button_1">1</div>
+              <ClickAwayListener onClickAway={() => setExplain("")}>
+                <div
+                  className={
+                    activeExplain === "1"
+                      ? "how__explain-button how__explain-button_1 how__explain-button_active"
+                      : "how__explain-button how__explain-button_1"
+                  }
+                  data-tooltip-id="explain-1"
+                  onClick={() => setExplain("1")}
+                >
+                  1
+                </div>
+              </ClickAwayListener>
+              <Tooltip
+                id="explain-1"
+                openOnClick
+                className="tooltip"
+                place="bottom"
+              >
+                <div className="tooltip__content">
+                  <Image
+                    className="tooltip__icon"
+                    src="./icons/init.svg"
+                    alt="listing"
+                    width={40}
+                    height={40}
+                  />
+                  <div className="tooltip__title">Initiating Purchase</div>
+                  <div className="tooltip__descr">
+                    The buyer buys the asset with a downpayment, and the NFT is
+                    moved into layaway. The buyer has access to the NFT via
+                    delegate.cash.
+                  </div>
+                </div>
+              </Tooltip>
               <Tilt className="how__explain-wrapper" transitionEasing="ease">
                 <div className="how__explain-card">
                   <div className="how__explain-heading">CloneX #3997</div>
                 </div>
               </Tilt>
 
-              <div className="how__explain-button how__explain-button_3">3</div>
+              <ClickAwayListener onClickAway={() => setExplain("")}>
+                <div
+                  className={
+                    activeExplain === "3"
+                      ? "how__explain-button how__explain-button_3 how__explain-button_active"
+                      : "how__explain-button how__explain-button_3"
+                  }
+                  data-tooltip-id="explain-3"
+                  onClick={() => setExplain("3")}
+                >
+                  3
+                </div>
+              </ClickAwayListener>
+              <Tooltip
+                id="explain-3"
+                openOnClick
+                className="tooltip"
+                place="bottom"
+              >
+                <div className="tooltip__content">
+                  <Image
+                    className="tooltip__icon"
+                    src="./icons/purchase.svg"
+                    alt="listing"
+                    width={40}
+                    height={40}
+                  />
+                  <div className="tooltip__title">Purchase Completed</div>
+                  <div className="tooltip__descr">
+                    When the buyer makes the last payment, the NFT is delivered
+                    into their wallet.
+                  </div>
+                </div>
+              </Tooltip>
               <Image
                 className="how__explain-ellipse how__explain-ellipse_sm"
                 src="./icons/howto-ellipse.svg"

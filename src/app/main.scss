@@ -985,6 +985,7 @@ body {
       letter-spacing: 0.75px;
       transition: $transition-1;
       position: relative;
+      cursor: pointer;
 
       &:hover,
       &:active,
@@ -1739,5 +1740,33 @@ body {
     &:hover {
       color: $primary;
     }
+  }
+}
+
+:root {
+  --rt-opacity: 1 !important;
+}
+
+.tooltip {
+  max-width: 327px;
+  padding: 46px 38px 65px 38px !important;
+  background: #16141e !important;
+  border: 1px solid #2a273c !important;
+  border-radius: 14px !important;
+  z-index: 2;
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    margin: $padding-default 0;
+    font-family: $font-secondary;
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #81859f;
   }
 }
