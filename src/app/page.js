@@ -710,7 +710,7 @@ export default function Home() {
           <div className="contact__gradient"></div>
           <Image
             className="contact__img"
-            src="./icons/banana-man.svg"
+            src="/banana-pink.png"
             alt="logo"
             width={108}
             height={118}
